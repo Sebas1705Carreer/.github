@@ -1,5 +1,3 @@
-# Sebas1705 — Career
-
 **A portfolio built as a product**: one live API is the single source of truth for all career data, a public site consumes it in real time, and a native editor keeps it up to date.
 
 🌐 **[Live portfolio](https://sebas1705carreer.github.io/carreerV2/)** · 🔌 **[Career API + Swagger](https://career-api.sebas1705.workers.dev/docs)** · 📚 **[Docs & state of the art](https://github.com/Sebas1705Carreer/wiki)**
