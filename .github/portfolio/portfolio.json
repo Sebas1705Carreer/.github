@@ -1,0 +1,11 @@
+{
+  "accent": "#4A5AF0",
+  "icon_alt": {
+    "en": "Career Ecosystem logo: the letters SE in white with a teal dot on an indigo rounded square",
+    "es": "Logo de Career Ecosystem: las letras SE en blanco con un punto verde azulado sobre un cuadrado redondeado índigo"
+  },
+  "banner_alt": {
+    "en": "Career Ecosystem (Folio) banner: the logo, the tagline \"Portfolio as a product: API, web and Android editor\" and the stack (Cloudflare Workers, TypeScript, React, Kotlin Multiplatform, Ktor)",
+    "es": "Banner de Career Ecosystem (Folio): el logo, el lema \"Portfolio como producto: API, web y editor Android\" y el stack (Cloudflare Workers, TypeScript, React, Kotlin Multiplatform, Ktor)"
+  }
+}
