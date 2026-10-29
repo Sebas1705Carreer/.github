@@ -16,10 +16,18 @@ Folio (KMP editor, Android/Desktop)      carreerV2 (React, live site)
 
 Every consumer reads the same eight entities, so nothing about a job or a project is written twice:
 
-| | | | |
-|---|---|---|---|
-| **20** projects | **3** jobs | **137** skills | **10** certifications |
-| **3** education | **12** soft skills | **1** personal profile | **2** languages |
+| Entity | Endpoint |
+|---|---|
+| Projects | [`/projects`](https://api.sebas1705.dev/projects) |
+| Jobs | [`/jobs`](https://api.sebas1705.dev/jobs) |
+| Skills | [`/skills`](https://api.sebas1705.dev/skills) |
+| Certifications | [`/certifications`](https://api.sebas1705.dev/certifications) |
+| Education | [`/education`](https://api.sebas1705.dev/education) |
+| Soft skills | [`/soft-skills`](https://api.sebas1705.dev/soft-skills) |
+| Personal profile | [`/personal`](https://api.sebas1705.dev/personal) |
+| Languages | [`/languages`](https://api.sebas1705.dev/languages) |
+
+Counts are deliberately not written here so they cannot drift: they are live on the [portfolio](https://sebas1705carreer.github.io/carreerV2/) and in [`/all`](https://api.sebas1705.dev/all).
 
 Reads are public; writes need a Bearer token. Every localizable field is a `LocalizedString` — a `{ lang: value }` map — and `GET /languages` is what drives each consumer's language switcher, so adding a locale is extending the maps rather than touching four codebases. Currently **English** (default) and **Spanish**.
 
@@ -46,4 +54,4 @@ The [state of the art](https://github.com/Sebas1705Carreer/wiki/blob/main/state-
 
 ---
 
-Maintained by [Sebas1705](https://github.com/Sebas1705) — Full Stack & Mobile Developer, Madrid.
+Maintained by [Sebas1705](https://github.com/Sebas1705) — Senior Full Stack & Mobile Developer, Madrid.
