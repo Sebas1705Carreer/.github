@@ -3,7 +3,7 @@
 🌐 **[Live portfolio](https://sebas1705carreer.github.io/carreerV2/)** · 🔌 **[Career API + Swagger](https://api.sebas1705.dev/docs)** · 📚 **[Docs & state of the art](https://github.com/Sebas1705Carreer/wiki)**
 
 ```
-Folio (KMP editor, Android/Desktop)      carreerV2 (React, live site)
+Folio (KMP editor, Android)              carreerV2 (React, live site)
         │  writes [Bearer]                      │  reads (runtime)
         ▼                                       ▼
             career-api  ·  Cloudflare Workers + KV
@@ -37,10 +37,10 @@ OpenAPI 3.0 lives at [`/openapi.json`](https://api.sebas1705.dev/openapi.json), 
 
 | Repo | What it is | Branch | CI |
 |---|---|---|---|
-| [career-api-worker](https://github.com/Sebas1705Carreer/career-api-worker) | The API — Cloudflare Workers + KV, TypeScript, OpenAPI 3.0. Single source of truth for everything below | `development` | Deploys to Cloudflare on push |
-| [carreerV2](https://github.com/Sebas1705Carreer/carreerV2) | **Active portfolio** — React 19, Vite, Tailwind v4, i18next. Reads the API at runtime with an offline fallback, and generates a PDF CV in the browser: 4 role profiles × 2 variants, one for people and one for ATS parsers | `main` | Lint → build → Pages |
-| [career-editor-kmp](https://github.com/Sebas1705Carreer/career-editor-kmp) | **Folio** — Kotlin Multiplatform editor for Android and Desktop: Compose, Ktor, encrypted token storage. The only thing that writes to the API | `development` | — |
-| [carreerV1](https://github.com/Sebas1705Carreer/carreerV1) | Legacy portfolio — Astro 4, Clean Architecture, 10 languages, Playwright end-to-end. Reads the API at build time. Kept for reference, still deployed | `main` | Vitest → build → E2E → Pages |
+| [career-api-worker](https://github.com/Sebas1705Carreer/career-api-worker) | The API — Cloudflare Workers + KV, TypeScript, OpenAPI 3.0. Single source of truth for everything below | `development` | `CI` (type-check + tests on PRs) · deploys to Cloudflare on push |
+| [carreerV2](https://github.com/Sebas1705Carreer/carreerV2) | **Active portfolio** — React 19, Vite, Tailwind v4, i18next. Reads the API at runtime with an offline fallback, and generates a PDF CV in the browser: 4 role profiles × 2 variants, one for people and one for ATS parsers | `main` | Lint → Vitest → build → Playwright e2e + axe → Pages |
+| [career-editor-kmp](https://github.com/Sebas1705Carreer/career-editor-kmp) | **Folio** — Kotlin Multiplatform editor for **Android only**: Compose, Ktor, encrypted token storage. The only app that writes to the API | `development` | `Tests` (unit, push and PR) · `Release APK` (on a `v*` tag, to Firebase App Distribution) |
+| [carreerV1](https://github.com/Sebas1705Carreer/carreerV1) | Legacy portfolio — Astro 5, Clean Architecture, 10 languages, Playwright end-to-end. Reads the API at build time. Kept for reference, still deployed | `main` | Type-check + unit tests → build → E2E → Pages |
 | [wiki](https://github.com/Sebas1705Carreer/wiki) | State of the art, audits and the operations runbook | `main` | — |
 | [.github](https://github.com/Sebas1705Carreer/.github) | This profile | `main` | — |
 
